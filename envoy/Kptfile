@@ -20,3 +20,9 @@ upstreamLock:
     commit: c368a83b1b2506412f373b4af397efa74c3d6d53
 info:
   description: sample envoy server
+pipeline:
+  mutators:
+  - name: PackageVariant.edge-clusters-kpt-edge-2-envoy..0
+    image: gcr.io/kpt-fn/set-labels:v0.2.0
+    configMap:
+      testlabel2: dcn2
